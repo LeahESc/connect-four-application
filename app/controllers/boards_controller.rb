@@ -7,10 +7,17 @@ class BoardsController < ApplicationController
     end 
 
     def create 
-        binding.pry 
+        # byebug
+        @board = Board.new(board_params)
+        if @board.save 
+            redirect_to board_path(@board)
+        else  
+            render :new 
+        end 
     end 
 
     def show
+        # @board = Board.find(params[:id])
     end 
 
     def update
@@ -19,10 +26,10 @@ class BoardsController < ApplicationController
     def destory
     end 
 
-    # private 
+    private 
 
-    # def board_params 
-    #     params.require(:board)
-    # end
+    def board_params 
+        params.require(:board).permit(:name)
+    end
 
 end 
