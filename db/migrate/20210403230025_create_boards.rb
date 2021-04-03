@@ -9,7 +9,7 @@ class CreateBoards < ActiveRecord::Migration[6.0]
       t.string :row4, default: "  ,  ,  ,  ,  ,  ,  ,"
       t.string :row5, default: "  ,  ,  ,  ,  ,  ,  ,"
       t.string :row6, default: "  ,  ,  ,  ,  ,  ,  ,"
-      t.integer :game_id
+      t.string :name
       t.timestamps
     end
   end

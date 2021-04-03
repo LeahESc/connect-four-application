@@ -3,6 +3,6 @@ class Board < ApplicationRecord
 
 
     def convert_rows_to_board
-        self.
+        
     end 
 end

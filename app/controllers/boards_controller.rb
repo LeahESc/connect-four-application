@@ -1,8 +1,13 @@
 class BoardsController < ApplicationController
-    def index 
-    end 
+    # def index 
+    # end 
 
     def new 
+        @board = Board.new
+    end 
+
+    def create 
+        binding.pry 
     end 
 
     def show
@@ -13,4 +18,11 @@ class BoardsController < ApplicationController
 
     def destory
     end 
-end
+
+    # private 
+
+    # def board_params 
+    #     params.require(:board)
+    # end
+
+end 
