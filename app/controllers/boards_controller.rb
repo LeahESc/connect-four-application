@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
     def show
     end 
 
-    def create 
+    def update
     end 
 
     def destory
