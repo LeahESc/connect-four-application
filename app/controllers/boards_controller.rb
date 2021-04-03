@@ -7,8 +7,8 @@ class BoardsController < ApplicationController
     end 
 
     def create 
-        # byebug
-        @board = Board.new(board_params)
+        # binding.pry
+        @board = Board.create(board_params)
         if @board.save 
             redirect_to board_path(@board)
         else  
@@ -17,7 +17,7 @@ class BoardsController < ApplicationController
     end 
 
     def show
-        # @board = Board.find(params[:id])
+       @board = Board.find(params[:id])
     end 
 
     def update
